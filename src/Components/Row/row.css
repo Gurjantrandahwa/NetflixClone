@@ -1,12 +1,19 @@
+.row {
+    margin-left: 20px;
+    color: white;
+}
+
 .row-posters {
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
 }
-.row-posters::-webkit-scrollbar{
+
+.row-posters::-webkit-scrollbar {
     display: none;
 }
+
 .row-posters-img {
     /*width: 100%;*/
     object-fit: contain;
@@ -15,7 +22,16 @@
     margin-right: 10px;
 }
 
+.row-posters-img-large {
+    max-height: 250px;
+}
+
 .row-posters-img:hover {
     /*opacity: 1;*/
-    transform: scale(1.08);
+    transform: scale(1.09);
+}
+
+.row-posters-img-large:hover {
+    /*opacity: 1;*/
+    transform: scale(1.1);
 }

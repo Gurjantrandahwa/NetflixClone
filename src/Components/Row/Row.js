@@ -14,14 +14,15 @@ export default function Row({title, fetchUrl,isLargeRow}) {
 
         fetchData()
     }, [fetchUrl])
-    return <div>
+    return <div className={"row"}>
         <h2>{title}</h2>
         <div className={"row-posters"}>
             {movies.map((movie, index) => {
                 return <div key={index}>
-                    <img className={"row-posters-img"}
+                    <img className={`row-posters-img ${isLargeRow &&"row-posters-img-large"}`}
                          key={movie.id}
-                         src={`${base_URL}${movie.poster_path}`}
+                         src={`${base_URL}${isLargeRow?movie.poster_path:movie.backdrop_path
+                         }`}
                          alt={movie.name}/>
                 </div>
             })}
