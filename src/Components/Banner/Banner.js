@@ -8,16 +8,18 @@ export default function Banner() {
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(requests.fetchNetflixOriginals);
-            setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length-1)
+            setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)
                 ]);
             return request;
         }
 
         fetchData();
     }, []);
-    function lengthOfDes(str,n){
-        return str?.length>n? str.substr(0,n-1)+"...":str;
+
+    function lengthOfDes(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
+
     return <header
         className={"banner"}
         style={{
@@ -33,10 +35,10 @@ export default function Banner() {
                 <button className={"banner-button"}>Play</button>
                 <button className={"banner-button"}>My List</button>
                 <h1 className={"banner-description"}>
-                    {lengthOfDes(movie?.overview ,150)}
+                    {lengthOfDes(movie?.overview, 150)}
                 </h1>
             </div>
         </div>
-<div className={"banner-fadeBottom"}/>
+        <div className={"banner-fadeBottom"}/>
     </header>
 }
