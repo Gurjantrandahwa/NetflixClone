@@ -1,9 +1,9 @@
 import React from "react";
 import "./HomeScreen.css";
-import Navbar from "../Navbar/Navbar";
-import Banner from "../Banner/Banner";
-import Row from "../Row/Row";
-import request from "../../Common/request";
+import Navbar from "../../Navbar/Navbar";
+import Banner from "../../Banner/Banner";
+import Row from "../../Row/Row";
+import request from "../../../Common/request";
 export default function HomeScreen() {
     return <div className={"home-screen"}>
         <Navbar/>
