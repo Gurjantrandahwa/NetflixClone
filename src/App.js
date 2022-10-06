@@ -18,7 +18,7 @@ function App() {
                     uid: userAuth.uid,
                     email: userAuth.email
                 }))
-                console.log(userAuth)
+
             } else {
                 dispatch(logout())
             }
@@ -29,14 +29,12 @@ function App() {
         <div className={"app"}>
             {!user ? (
                 <LoginScreen/>
-
             ) : (
                 <Routes>
                     <Route path={'/profile'} element={<Profile/>}/>
                     <Route exact path={"/"} element={<HomeScreen/>}/>
                 </Routes>
             )}
-
 
         </div>
     </BrowserRouter>

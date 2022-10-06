@@ -17,9 +17,6 @@ export default function Profile() {
                 <div className={"profile-details"}>
                     <h2>{user.email}</h2>
                     <div className={"profile-plans"}>
-<h3>Plans</h3>
-                        <p></p>
-
                         <button onClick={() => auth.signOut()}
                                 className={"profile-signOut-btn"}>
                             Sign Out
