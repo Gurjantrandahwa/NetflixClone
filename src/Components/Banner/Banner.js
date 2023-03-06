@@ -35,7 +35,7 @@ export default function Banner() {
                 <button className={"banner-button"}>Play</button>
                 <button className={"banner-button"}>My List</button>
                 <h1 className={"banner-description"}>
-                    {lengthOfDes(movie?.overview, 150)}
+                    {lengthOfDes(movie?.overview, 180)}
                 </h1>
             </div>
         </div>
